@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans:regular,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:regular,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="http://fonts.cdnfonts.com/css/post-no-bills-jaffna?styles=18991"
+      rel="stylesheet"
+    />
+    <title>Porten</title>
+  </head>
+  <body>
+    <header class="header">
+      <!-- контактная информация -->
+      <div class="header__contacts bg-color--black">
+        <div class="container">
+          <div class="contacts display--flex justify-content--space-between">
+            <div class="display--flex align-items--center">
+              <img
+                class="icon-phone"
+                src="/img/icon/phone.svg"
+                alt="icon-phone"
+              />
+              <a href="tel:88121234567">8 (812) 123-45-67</a>
+              <span class="schedule">Работаем 7 дней в неделю</span>
+              <span>9:00 — 18:00</span>
+            </div>
+            <div class="display--flex align-items--center">
+              <a href="#"
+                ><img
+                  class="link-log-out"
+                  src="/img/icon/log-in.svg"
+                  alt="icon-log-in"
+              /></a>
+              <a href="#" class="link-log-in">Войти</a>
+              <a href="#" class="link-reg">Регистрация</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- навигация -->
+      <div class="header__nav">
+        <div class="container">
+          <div class="display--flex align-items--center">
+            <a class="header__logo" href="#"
+              ><img src="/img/icon/logo.svg" alt="logo-porten"
+            /></a>
+            <nav class="menu display--flex justify-content--flex-end">
+              <ul class="menu__list display--flex">
+                <div class="menu__block">
+                  <li class="menu__item">
+                    <a href="#">Понравилось</a>
+                  </li>
+                </div>
+                <div class="menu__block">
+                  <li class="menu__item">
+                    <a href="#">Личный кабинет</a>
+                  </li>
+                </div>
+                <div class="menu__block">
+                  <li class="menu__item">
+                    <a href="#">Настройки</a>
+                  </li>
+                </div>
+              </ul>
+            </nav>
+            <a class="cart transform-scale transition" href="#"
+              ><img src="/img/icon/cart.svg" alt="cart"
+            /></a>
+            <a class="transform-scale transition" href="#"
+              ><img src="/img/icon/search.svg" alt="search"
+            /></a>
+            <a class="burger display--none" href="#">
+              <img src="/img/icon/search.svg" alt="burger" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <!-- главный раздел -->
+      <section
+        class="main-screen bg-image display--flex flex-direction--column align-items--center"
+      >
+        <div class="block-logo text-transform--uppercase text-align--center">
+          <h1 class="block-logo__title">PORTEN</h1>
+          <p class="block-logo__sity">САНКТ-ПЕТЕРБУРГ</p>
+        </div>
+        <p
+          class="main-screen__description text-align--center text-transform--uppercase"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
+          interdum purus, est tortor pulvinar ut in. Fringilla a diam enim sed
+          justo, sed iaculis sagittis. Tortor id eu interdum nec ut iaculis.
+          Penatibus ullamcorper ultricies morbi ipsum sem metus pharetra, mi.
+          Tortor nibh magna feugiat id nunc, dui nisl viverra.
+        </p>
+      </section>
+      <!-- коллекции -->
+      <selection class="collections">
+        <div class="new-collection display--flex">
+          <!-- сезонная коллекция -->
+          <div
+            class="season-collection bg-color--black display--flex flex-direction--column align-items--center"
+          >
+            <h2
+              class="season-collection__title text-transform--uppercase text-align--center"
+            >
+              СЕЗОН 2020/21
+            </h2>
+            <hr class="line" />
+            <div class="season-collection__grid display--grid">
+              <div class="collection-item">
+                <div class="collection-item__wrapper-img display--flex">
+                  <img
+                    class="transition transform-scale"
+                    src="/img/watch.png"
+                    alt="watch"
+                  />
+                </div>
+                <p class="collection-item__title">Louis XVI ATHOS</p>
+                <p class="collection-item__price">165 000 руб.</p>
+              </div>
+              <div class="collection-item">
+                <div class="collection-item__wrapper-img display--flex">
+                  <img
+                    class="transition transform-scale"
+                    src="/img/watch.png"
+                    alt="watch"
+                  />
+                </div>
+                <p class="collection-item__title">Louis XVI ATHOS</p>
+                <p class="collection-item__price">165 000 руб.</p>
+              </div>
+              <div class="collection-item">
+                <div class="collection-item__wrapper-img display--flex">
+                  <img
+                    class="transition transform-scale"
+                    src="/img/watch.png"
+                    alt="watch"
+                  />
+                </div>
+                <p class="collection-item__title">Louis XVI ATHOS</p>
+                <p class="collection-item__price">165 000 руб.</p>
+              </div>
+            </div>
+          </div>
+          <!-- каталог новой коллекции -->
+          <div
+            class="new-collection-catalog bg-image display--flex flex-direction--column align-items--center"
+          >
+            <h2
+              class="new-collection-catalog__title text-transform--uppercase text-align--center"
+            >
+              НОВАЯ КОЛЛЕКЦИЯ
+            </h2>
+            <hr class="line" />
+            <a
+              class="new-collection-catalog__link text-transform--uppercase"
+              href="#"
+              target="_blank"
+              >КАТАЛОГ</a
+            >
+          </div>
+        </div>
+        <div class="popular-collection display--flex">
+          <div class="popular-collection__sample bg-image"></div>
+          <div
+            class="popular-collection-catalog bg-color--black display--flex flex-direction--column align-items--center"
+          >
+            <h2
+              class="popular-collection-catalog__title text-transform--uppercase text-align--center"
+            >
+              КАТАЛОГ 2018
+            </h2>
+            <hr class="line" />
+            <p
+              class="popular-collection-catalog__description text-align--center"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
+              rutrum ornare ut mattis habitant dui arcu. Sagittis amet nunc ut
+              neque quis nibh arcu. Vivamus vestibulum nisi et venenatis sed
+              scelerisque magna consectetur. Amet convallis quis gravida
+              facilisis vulputate. Faucibus facilisi habitasse ipsum interdum
+              dictum aliquet. Velit quis ullamcorper pulvinar nulla malesuada
+              integer. Aenean praesent viverra nulla nullam natoque volutpat
+              curabitur auctor. Viverra viverra ullamcorper scelerisque risus
+              dignissim egestas. Id aliquam a aliquam egestas leo orci pharetra
+              sed diam.
+            </p>
+            <a
+              class="popular-collection-catalog__link text-transform--uppercase"
+              href="#"
+              target="_blank"
+              >ПОСМОТРЕТЬ КОЛЛЕКЦИЮ</a
+            >
+          </div>
+        </div>
+      </selection>
+      <!-- новые поступления -->
+      <section class="new-goods bg-color--black">
+        <div class="container">
+          <div class="display--flex flex-direction--column align-items--center">
+            <h2
+              class="new-goods__title text-transform--uppercase text-align--center"
+            >
+              НОВЫЕ ПОСТУПЛЕНИЯ
+            </h2>
+            <hr class="line" />
+            <div class="new-goods__grid display--grid">
+              <div class="collection-item">
+                <div class="collection-item__wrapper-img display--flex">
+                  <img
+                    class="transition transform-scale"
+                    src="/img/watch.png"
+                    alt="watch"
+                  />
+                </div>
+                <p class="collection-item__title">Louis XVI ATHOS</p>
+                <p class="collection-item__price">165 000 руб.</p>
+              </div>
+              <div class="collection-item">
+                <div class="collection-item__wrapper-img display--flex">
+                  <img
+                    class="transition transform-scale"
+                    src="/img/watch.png"
+                    alt="watch"
+                  />
+                </div>
+                <p class="collection-item__title">Louis XVI ATHOS</p>
+                <p class="collection-item__price">165 000 руб.</p>
+              </div>
+              <div class="collection-item">
+                <div class="collection-item__wrapper-img display--flex">
+                  <img
+                    class="transition transform-scale"
+                    src="/img/watch.png"
+                    alt="watch"
+                  />
+                </div>
+                <p class="collection-item__title">Louis XVI ATHOS</p>
+                <p class="collection-item__price">165 000 руб.</p>
+              </div>
+              <div class="collection-item">
+                <div class="collection-item__wrapper-img display--flex">
+                  <img
+                    class="transition transform-scale"
+                    src="/img/watch.png"
+                    alt="watch"
+                  />
+                </div>
+                <p class="collection-item__title">Louis XVI ATHOS</p>
+                <p class="collection-item__price">165 000 руб.</p>
+              </div>
+              <div class="collection-item">
+                <div class="collection-item__wrapper-img display--flex">
+                  <img
+                    class="transition transform-scale"
+                    src="/img/watch.png"
+                    alt="watch"
+                  />
+                </div>
+                <p class="collection-item__title">Louis XVI ATHOS</p>
+                <p class="collection-item__price">165 000 руб.</p>
+              </div>
+              <div class="collection-item">
+                <div class="collection-item__wrapper-img display--flex">
+                  <img
+                    class="transition transform-scale"
+                    src="/img/watch.png"
+                    alt="watch"
+                  />
+                </div>
+                <p class="collection-item__title">Louis XVI ATHOS</p>
+                <p class="collection-item__price">165 000 руб.</p>
+              </div>
+              <div class="collection-item">
+                <div class="collection-item__wrapper-img display--flex">
+                  <img
+                    class="transition transform-scale"
+                    src="/img/watch.png"
+                    alt="watch"
+                  />
+                </div>
+                <p class="collection-item__title">Louis XVI ATHOS</p>
+                <p class="collection-item__price">165 000 руб.</p>
+              </div>
+              <div class="collection-item">
+                <div class="collection-item__wrapper-img display--flex">
+                  <img
+                    class="transition transform-scale"
+                    src="/img/watch.png"
+                    alt="watch"
+                  />
+                </div>
+                <p class="collection-item__title">Louis XVI ATHOS</p>
+                <p class="collection-item__price">165 000 руб.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- бренды -->
+      <section class="brands">
+        <div class="container">
+          <div class="display--flex flex-direction--column align-items--center">
+            <h2
+              class="brands__title text-transform--uppercase text-align--center"
+            >
+              НАШИ БРЕНДЫ
+            </h2>
+            <hr class="line" />
+            <div class="brands__grid display--grid">
+              <img
+                class="transition transform-scale"
+                src="/img/brand.png"
+                alt="brand"
+              />
+              <img
+                class="transition transform-scale"
+                src="/img/brand.png"
+                alt="brand"
+              />
+              <img
+                class="transition transform-scale"
+                src="/img/brand.png"
+                alt="brand"
+              />
+              <img
+                class="transition transform-scale"
+                src="/img/brand.png"
+                alt="brand"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-top bg-image">
+        <div class="container">
+          <div class="display--grid footer-top__grid">
+            <div class="footer-top__about">
+              <h3 class="about__title text-transform--uppercase">О МАГАЗИНЕ</h3>
+              <p class="about__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi
+                semper viverra nunc cursus tortor lectus nunc nulla nibh.
+                Egestas amet consectetur vel vitae aliquam dictum suspendisse.
+                Lobortis eget consequat, tellus et et sed turpis. Pretium
+                quisque vitae, amet, porttitor odio ultricies massa pharetra
+                leo. Et ipsum urna fames in sit mi ultrices nisi, nunc.
+              </p>
+            </div>
+            <div class="footer-top__category">
+              <h3 class="category__title text-transform--uppercase">
+                КАТЕГОРИЯ
+              </h3>
+              <div class="category__list display--flex">
+                <button
+                  class="category__item bg-color--black transition transform-scale"
+                >
+                  часы
+                </button>
+                <button
+                  class="category__item bg-color--black transition transform-scale"
+                >
+                  браслеты
+                </button>
+                <button
+                  class="category__item bg-color--black transition transform-scale"
+                >
+                  ремни
+                </button>
+                <button
+                  class="category__item bg-color--black transition transform-scale"
+                >
+                  ювелирные изделия
+                </button>
+                <button
+                  class="category__item bg-color--black transition transform-scale"
+                >
+                  запонки
+                </button>
+              </div>
+            </div>
+            <div class="footer-top__mailing">
+              <h3 class="mailing__title text-transform--uppercase">РАССЫЛКА</h3>
+              <p class="mailing__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi
+                semper viverra nunc cursus tortor lectus nunc nulla nibh.
+              </p>
+              <div class="display--flex">
+                <input
+                  class="email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Ваша почта"
+                />
+                <button class="btn-subscribe text-transform--uppercase">
+                  ПОДПИСАТЬСЯ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright bg-color--black">
+        <div
+          class="container display--flex justify-content--space-between align-items--center"
+        >
+          <p>© 2020 Все права защищены</p>
+          <p class="creator">Сделано Figma.info</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
