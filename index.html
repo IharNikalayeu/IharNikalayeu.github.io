@@ -57,34 +57,32 @@
             <a class="header__logo" href="#"
               ><img src="/img/icon/logo.svg" alt="logo-porten"
             /></a>
+            <input id="menu__toggle" type="checkbox" />
             <nav class="menu display--flex justify-content--flex-end">
               <ul class="menu__list display--flex">
-                <div class="menu__block">
-                  <li class="menu__item">
-                    <a href="#">Понравилось</a>
-                  </li>
-                </div>
-                <div class="menu__block">
-                  <li class="menu__item">
-                    <a href="#">Личный кабинет</a>
-                  </li>
-                </div>
-                <div class="menu__block">
-                  <li class="menu__item">
-                    <a href="#">Настройки</a>
-                  </li>
-                </div>
+                <li class="menu__item">
+                  <a href="#">Понравилось</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#">Личный кабинет</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#">Настройки</a>
+                </li>
               </ul>
             </nav>
-            <a class="cart transform-scale transition" href="#"
-              ><img src="/img/icon/cart.svg" alt="cart"
-            /></a>
-            <a class="transform-scale transition" href="#"
+            <a class="icon-link transform-scale transition" href="#"
               ><img src="/img/icon/search.svg" alt="search"
             /></a>
-            <a class="burger display--none" href="#">
-              <img src="/img/icon/search.svg" alt="burger" />
-            </a>
+            <a class="icon-link transform-scale transition" href="#"
+              ><img src="/img/icon/cart.svg" alt="cart"
+            /></a>
+            <label
+              class="menu__btn display--none align-items--center icon-link transform-scale transition"
+              for="menu__toggle"
+            >
+              <span></span>
+            </label>
           </div>
         </div>
       </div>
