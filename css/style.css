@@ -179,6 +179,7 @@ body {
 
 #menu__toggle {
   /* opacity: 0; */
+  display: none;
 }
 
 .menu__btn {
@@ -274,14 +275,14 @@ body {
   font-size: 18px;
   line-height: 23px;
   letter-spacing: 0.1em;
-  padding: 12px 28px;
-  border: 1px solid #ffffff;
+  /* padding: 12px 28px; */
+  /* border: 1px solid #ffffff; */
 }
 
-.collections a:hover {
+/* .collections a:hover {
   background-color: var(--white);
   color: var(--black);
-}
+} */
 
 .season-collection {
   flex: 1 1 55%;
@@ -299,6 +300,11 @@ body {
 
 .collection-item {
   font-family: "Playfair Display";
+}
+
+.collection-item__link {
+  padding: 55px 22px;
+  background-color: #191b1c;
 }
 
 .collection-item__wrapper-img {
@@ -476,7 +482,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
   .brands__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 900px) {
@@ -485,9 +491,6 @@ body {
     grid-gap: 15px;
   }
   .new-goods__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .brands__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
