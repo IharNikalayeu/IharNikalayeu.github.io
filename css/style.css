@@ -122,6 +122,21 @@ body {
   background-color: var(--black);
 }
 
+.position--relative {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.position--absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.z-index-1 {
+  z-index: 1;
+}
+
 .header {
   color: var(--gray);
 }
@@ -218,19 +233,12 @@ body {
 }
 
 .transform-scale:hover {
-  transform: scale(1.3);
-}
-
-.bg-image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--black);
+  transform: scale(1.15);
 }
 
 .line {
   width: 120px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--white);
 }
 
 .main h2 {
@@ -239,19 +247,35 @@ body {
   line-height: 42px;
 }
 
-.main-screen {
-  background-image: url(/img/bg/first-screen.png);
+.bg-image {
+  position: relative;
 }
 
-.main-screen__description {
-  font-size: 16px;
-  line-height: 150%;
-  width: 730px;
-  margin: 80px auto 154px;
+.bg-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main-screen {
+  padding-top: 160px;
+  padding-bottom: 154px;
+}
+
+.main-screen__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .block-logo {
-  margin: 160px auto 0px;
+  z-index: 1;
+  margin-bottom: 80px;
   border: 4px solid var(--white);
   padding: 94px 68px;
 }
@@ -260,9 +284,9 @@ body {
   font-family: "Post No Bills Jaffna", sans-serif;
   font-weight: 700;
   font-size: 64px;
-  line-height: 96px;
+  line-height: 150%;
   text-decoration-line: underline;
-  text-underline-offset: 10px;
+  /* text-underline-offset: 8px; */
 }
 
 .block-logo__sity {
@@ -271,124 +295,134 @@ body {
   line-height: 28px;
 }
 
-.collections a {
-  font-size: 18px;
-  line-height: 23px;
-  letter-spacing: 0.1em;
-  /* padding: 12px 28px; */
-  /* border: 1px solid #ffffff; */
+.main-screen__description {
+  z-index: 1;
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 730px;
 }
-
-/* .collections a:hover {
-  background-color: var(--white);
-  color: var(--black);
-} */
 
 .season-collection {
-  flex: 1 1 55%;
+  padding: 93px 0px;
+  flex-grow: 1;
 }
 
-.season-collection__title {
-  margin: 93px auto 50px;
+.season-collection > *:not(:last-child) {
+  margin-bottom: 50px;
 }
 
 .season-collection__grid {
-  margin: 50px auto 93px;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
+  gap: 50px;
 }
 
 .collection-item {
   font-family: "Playfair Display";
 }
 
+.collection-btn {
+  font-size: 18px;
+  line-height: 127%;
+  letter-spacing: 0.1em;
+  padding: 12px 28px;
+  border: 1px solid var(--white);
+}
+
+.collection-btn:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
 .collection-item__link {
   padding: 55px 22px;
   background-color: #191b1c;
-}
-
-.collection-item__wrapper-img {
-  padding: 55px 22px;
-  background-color: #191b1c;
+  margin-bottom: 25px;
 }
 
 .collection-item__title {
-  margin: 25px auto 10px;
+  margin-bottom: 10px;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 117%;
 }
 
 .collection-item__price {
   font-size: 16px;
-  line-height: 19px;
+  line-height: 119%;
   color: var(--light-gray);
 }
 
 .new-collection-catalog {
-  flex: 1 1 45%;
-  background-image: url(/img/bg/new-collection.png);
+  flex-grow: 1;
+  padding: 484px 0px 100px;
 }
 
-.new-collection-catalog__title {
-  margin: 484px auto 30px;
+.new-collection-catalog__block > *:not(:last-child) {
+  margin-bottom: 30px;
 }
 
-.new-collection-catalog__link {
-  margin: 30px auto 100px;
+.new-collection-catalog__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.new-collection-catalog__img img {
+  object-position: left;
 }
 
 .popular-collection__sample {
   flex: 1 1 45%;
-  background-image: url(/img/bg/collection-2018.png);
 }
 
 .popular-collection-catalog {
+  padding: 100px 0px;
   flex: 1 1 55%;
 }
 
-.popular-collection-catalog__title {
-  margin: 100px auto 40px;
+.popular-collection-catalog > *:not(:last-child) {
+  margin-bottom: 40px;
 }
 
 .popular-collection-catalog__description {
-  width: 471px;
-  margin: 40px auto 61px;
+  max-width: 471px;
   font-size: 14px;
   line-height: 150%;
 }
 
-.popular-collection-catalog__link {
-  margin-bottom: 100px;
-}
-
-.new-goods__grid {
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 23px;
-  margin: 81px auto 150px;
+.new-goods-block {
+  padding: 120px 0px 150px;
 }
 
 .new-goods__title {
-  margin: 120px auto 50px;
+  margin-bottom: 40px;
+}
+.new-goods__grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 23px;
+  margin-top: 81px;
 }
 
 .brands {
   background-color: #0f0f0f;
 }
 
-.brands__grid {
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
-  margin: 40px 0px 80px;
+.brands-block {
+  padding: 60px 0px 80px;
 }
 
-.brands__title {
-  margin: 60px auto 40px;
+.brands-block > *:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.brands__grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 
 .footer-top {
-  background-image: url(/img/bg/footer.png);
-  padding-top: 80px;
-  padding-bottom: 100px;
+  padding: 80px 0px 100px;
 }
 
 .footer-top h3 {
@@ -400,7 +434,7 @@ body {
 
 .footer-top__grid {
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
+  gap: 30px;
 }
 
 .category__list {
@@ -463,18 +497,31 @@ body {
 /* адаптивность */
 
 @media (max-width: 1650px) {
+  .season-collection {
+    padding: 50px 0px;
+  }
+  .season-collection__grid {
+    gap: 20px;
+  }
+  .new-collection-catalog {
+    padding-top: 300px;
+  }
+  .season-collection > *:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .collection-item__link {
+    padding: 40px 16px;
+  }
+}
+@media (max-width: 1300px) {
   .new-collection {
     flex-direction: column;
   }
-  .new-collection-catalog__link {
-    margin: 30px auto 800px;
+  .new-collection-catalog {
+    padding-top: 484px;
   }
-  .popular-collection {
-    flex-direction: column-reverse;
-  }
-  .popular-collection__sample {
-    height: 880px;
-    flex: none;
+  .new-collection-catalog__img img {
+    object-position: top;
   }
 }
 @media (max-width: 1150px) {
@@ -488,7 +535,7 @@ body {
 @media (max-width: 900px) {
   .season-collection__grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
+    gap: 15px;
   }
   .new-goods__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -546,7 +593,7 @@ body {
     width: auto;
   }
   .new-goods__grid {
-    grid-gap: 10px;
+    gap: 10px;
   }
   .footer-top__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -616,7 +663,7 @@ body {
 
   .season-collection__grid {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
+    gap: 10px;
   }
   .new-goods__grid {
     grid-template-columns: repeat(1, 1fr);

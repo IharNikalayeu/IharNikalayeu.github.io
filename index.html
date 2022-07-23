@@ -16,9 +16,14 @@
       rel="stylesheet"
     />
     <link
-      href="http://fonts.cdnfonts.com/css/post-no-bills-jaffna?styles=18991"
+      href="http://fonts.cdnfonts.com/css/post-no-bills-jaffna"
       rel="stylesheet"
     />
+
+    <!-- <link
+      href="http://fonts.cdnfonts.com/css/post-no-bills-jaffna?styles=18991"
+      rel="stylesheet"
+    /> -->
     <title>Porten</title>
   </head>
   <body>
@@ -90,14 +95,16 @@
     <main class="main">
       <!-- главный раздел -->
       <section
-        class="main-screen bg-image display--flex flex-direction--column align-items--center"
+        class="main-screen display--flex flex-direction--column align-items--center position--relative"
       >
-        <div class="block-logo text-transform--uppercase text-align--center">
+        <div
+          class="block-logo text-transform--uppercase text-align--center position--relative"
+        >
           <h1 class="block-logo__title">PORTEN</h1>
           <p class="block-logo__sity">САНКТ-ПЕТЕРБУРГ</p>
         </div>
         <p
-          class="main-screen__description text-align--center text-transform--uppercase"
+          class="main-screen__description text-align--center text-transform--uppercase position--relative"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
           interdum purus, est tortor pulvinar ut in. Fringilla a diam enim sed
@@ -105,6 +112,9 @@
           Penatibus ullamcorper ultricies morbi ipsum sem metus pharetra, mi.
           Tortor nibh magna feugiat id nunc, dui nisl viverra.
         </p>
+        <div class="main-screen__img bg-image">
+          <img src="/img/bg/main-screen.jpg" alt="main-screen-bg" />
+        </div>
       </section>
       <!-- коллекции -->
       <selection class="collections">
@@ -121,66 +131,67 @@
             <hr class="line" />
             <div class="season-collection__grid display--grid">
               <div class="collection-item display--flex flex-direction--column">
-                <a href="#" class="collection-item__link display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
+                <a
+                  href="#"
+                  class="collection-item__link display--flex transition transform-scale"
+                >
+                  <img src="/img/watch.png" alt="watch"
                 /></a>
-                <!-- <div class="collection-item__wrapper-img display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
-                  />
-                </div> -->
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
-              <div class="collection-item">
-                <div class="collection-item__wrapper-img display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
-                  />
-                </div>
+              <div class="collection-item display--flex flex-direction--column">
+                <a
+                  href="#"
+                  class="collection-item__link display--flex transition transform-scale"
+                >
+                  <img src="/img/watch.png" alt="watch"
+                /></a>
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
-              <div class="collection-item">
-                <div class="collection-item__wrapper-img display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
-                  />
-                </div>
+              <div class="collection-item display--flex flex-direction--column">
+                <a
+                  href="#"
+                  class="collection-item__link display--flex transition transform-scale"
+                >
+                  <img src="/img/watch.png" alt="watch"
+                /></a>
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
             </div>
           </div>
           <!-- каталог новой коллекции -->
-          <div
-            class="new-collection-catalog bg-image display--flex flex-direction--column align-items--center"
-          >
-            <h2
-              class="new-collection-catalog__title text-transform--uppercase text-align--center"
+          <div class="new-collection-catalog position--relative">
+            <div
+              class="new-collection-catalog__block display--flex flex-direction--column align-items--center position--relative z-index-1"
             >
-              НОВАЯ КОЛЛЕКЦИЯ
-            </h2>
-            <hr class="line" />
-            <a
-              class="new-collection-catalog__link text-transform--uppercase"
-              href="#"
-              target="_blank"
-              >КАТАЛОГ</a
-            >
+              <h2
+                class="new-collection-catalog__title text-transform--uppercase text-align--center"
+              >
+                НОВАЯ КОЛЛЕКЦИЯ
+              </h2>
+              <hr class="line" />
+              <a
+                class="collection-btn text-transform--uppercase"
+                href="#"
+                target="_blank"
+                >КАТАЛОГ</a
+              >
+            </div>
+            <div class="new-collection-catalog__img bg-image">
+              <img
+                src="/img/bg/new-collection.jpg"
+                alt="new-collection-catalog"
+              />
+            </div>
           </div>
         </div>
         <div class="popular-collection display--flex">
-          <div class="popular-collection__sample bg-image"></div>
+          <div class="popular-collection__sample bg-image">
+            <img src="/img/bg/collection-2018.jpg" alt="popular-collection" />
+          </div>
           <div
             class="popular-collection-catalog bg-color--black display--flex flex-direction--column align-items--center"
           >
@@ -205,7 +216,7 @@
               sed diam.
             </p>
             <a
-              class="popular-collection-catalog__link text-transform--uppercase"
+              class="collection-btn text-transform--uppercase"
               href="#"
               target="_blank"
               >ПОСМОТРЕТЬ КОЛЛЕКЦИЮ</a
@@ -216,7 +227,9 @@
       <!-- новые поступления -->
       <section class="new-goods bg-color--black">
         <div class="container">
-          <div class="display--flex flex-direction--column align-items--center">
+          <div
+            class="new-goods-block display--flex flex-direction--column align-items--center"
+          >
             <h2
               class="new-goods__title text-transform--uppercase text-align--center"
             >
@@ -224,91 +237,83 @@
             </h2>
             <hr class="line" />
             <div class="new-goods__grid display--grid">
-              <div class="collection-item">
-                <div class="collection-item__wrapper-img display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
-                  />
-                </div>
+              <div class="collection-item display--flex flex-direction--column">
+                <a
+                  href="#"
+                  class="collection-item__link display--flex transition transform-scale"
+                >
+                  <img src="/img/watch.png" alt="watch"
+                /></a>
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
-              <div class="collection-item">
-                <div class="collection-item__wrapper-img display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
-                  />
-                </div>
+              <div class="collection-item display--flex flex-direction--column">
+                <a
+                  href="#"
+                  class="collection-item__link display--flex transition transform-scale"
+                >
+                  <img src="/img/watch.png" alt="watch"
+                /></a>
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
-              <div class="collection-item">
-                <div class="collection-item__wrapper-img display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
-                  />
-                </div>
+              <div class="collection-item display--flex flex-direction--column">
+                <a
+                  href="#"
+                  class="collection-item__link display--flex transition transform-scale"
+                >
+                  <img src="/img/watch.png" alt="watch"
+                /></a>
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
-              <div class="collection-item">
-                <div class="collection-item__wrapper-img display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
-                  />
-                </div>
+              <div class="collection-item display--flex flex-direction--column">
+                <a
+                  href="#"
+                  class="collection-item__link display--flex transition transform-scale"
+                >
+                  <img src="/img/watch.png" alt="watch"
+                /></a>
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
-              <div class="collection-item">
-                <div class="collection-item__wrapper-img display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
-                  />
-                </div>
+              <div class="collection-item display--flex flex-direction--column">
+                <a
+                  href="#"
+                  class="collection-item__link display--flex transition transform-scale"
+                >
+                  <img src="/img/watch.png" alt="watch"
+                /></a>
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
-              <div class="collection-item">
-                <div class="collection-item__wrapper-img display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
-                  />
-                </div>
+              <div class="collection-item display--flex flex-direction--column">
+                <a
+                  href="#"
+                  class="collection-item__link display--flex transition transform-scale"
+                >
+                  <img src="/img/watch.png" alt="watch"
+                /></a>
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
-              <div class="collection-item">
-                <div class="collection-item__wrapper-img display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
-                  />
-                </div>
+              <div class="collection-item display--flex flex-direction--column">
+                <a
+                  href="#"
+                  class="collection-item__link display--flex transition transform-scale"
+                >
+                  <img src="/img/watch.png" alt="watch"
+                /></a>
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
-              <div class="collection-item">
-                <div class="collection-item__wrapper-img display--flex">
-                  <img
-                    class="transition transform-scale"
-                    src="/img/watch.png"
-                    alt="watch"
-                  />
-                </div>
+              <div class="collection-item display--flex flex-direction--column">
+                <a
+                  href="#"
+                  class="collection-item__link display--flex transition transform-scale"
+                >
+                  <img src="/img/watch.png" alt="watch"
+                /></a>
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
@@ -319,10 +324,10 @@
       <!-- бренды -->
       <section class="brands">
         <div class="container">
-          <div class="display--flex flex-direction--column align-items--center">
-            <h2
-              class="brands__title text-transform--uppercase text-align--center"
-            >
+          <div
+            class="brands-block display--flex flex-direction--column align-items--center"
+          >
+            <h2 class="text-transform--uppercase text-align--center">
               НАШИ БРЕНДЫ
             </h2>
             <hr class="line" />
@@ -355,7 +360,9 @@
     <footer class="footer">
       <div class="footer-top bg-image">
         <div class="container">
-          <div class="display--grid footer-top__grid">
+          <div
+            class="footer-top__grid display--grid position--relative z-index-1"
+          >
             <div class="footer-top__about">
               <h3 class="about__title text-transform--uppercase">О МАГАЗИНЕ</h3>
               <p class="about__description">
@@ -420,13 +427,14 @@
             </div>
           </div>
         </div>
+        <img src="/img/bg/footer.jpg" alt="footer" />
       </div>
       <div class="footer__copyright bg-color--black">
         <div
           class="container display--flex justify-content--space-between align-items--center"
         >
-          <p>© 2020 Все права защищены</p>
-          <p class="creator">Сделано Figma.info</p>
+          <p>© 2022 Все права защищены</p>
+          <p class="creator">BY Ihar Nikalayeu</p>
         </div>
       </div>
     </footer>
