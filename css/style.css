@@ -274,7 +274,6 @@ body {
 }
 
 .block-logo {
-  z-index: 1;
   margin-bottom: 80px;
   border: 4px solid var(--white);
   padding: 94px 68px;
@@ -296,7 +295,6 @@ body {
 }
 
 .main-screen__description {
-  z-index: 1;
   font-size: 16px;
   line-height: 150%;
   max-width: 730px;
@@ -304,7 +302,8 @@ body {
 
 .season-collection {
   padding: 93px 0px;
-  flex-grow: 1;
+  flex: 1 1 55%;
+  /* flex-grow: 1; */
 }
 
 .season-collection > *:not(:last-child) {
@@ -352,7 +351,8 @@ body {
 }
 
 .new-collection-catalog {
-  flex-grow: 1;
+  flex: 1 1 45%;
+  /* flex-grow: 1; */
   padding: 484px 0px 100px;
 }
 
@@ -513,20 +513,47 @@ body {
     padding: 40px 16px;
   }
 }
-@media (max-width: 1300px) {
+
+@media (max-width: 1450px) {
   .new-collection {
     flex-direction: column;
   }
   .new-collection-catalog {
-    padding-top: 484px;
+    padding-top: 400px;
+    padding-bottom: 200px;
   }
   .new-collection-catalog__img img {
     object-position: top;
   }
+  .popular-collection {
+    flex-direction: column-reverse;
+  }
+
+  .popular-collection-catalog__description {
+    max-width: 900px;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  .popular-collection__sample {
+    min-height: 600px;
+  }
+
+  .popular-collection__sample img {
+    object-position: top;
+  }
+
 }
 @media (max-width: 1150px) {
+  .new-goods-block {
+    padding: 70px 0px;
+  }
   .new-goods__grid {
     grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+  }
+  .brands-block {
+    padding: 40px 0px;
   }
   .brands__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -535,10 +562,14 @@ body {
 @media (max-width: 900px) {
   .season-collection__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    row-gap: 30px;
   }
   .new-goods__grid {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+  }
+  .new-collection-catalog__img img {
+    object-position: left;
   }
 }
 @media (max-width: 750px) {
@@ -566,6 +597,7 @@ body {
     top: 100px;
     left: 0px;
     background-color: #0f0f0f;
+    z-index: 2;
   }
   #menu__toggle:not(:checked) ~ .menu .menu__list {
     visibility: hidden;
@@ -582,7 +614,7 @@ body {
     font-size: 48px;
   }
   .block-logo__sity {
-    margin-top: -28px;
+    margin-top: -20px;
     font-size: 16px;
   }
   .main-screen__description {
@@ -592,34 +624,13 @@ body {
     margin-right: 30px;
     width: auto;
   }
-  .new-goods__grid {
-    gap: 10px;
-  }
   .footer-top__grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "a b"
-      "c c";
+    grid-template-columns: repeat(1, 1fr);
+    gap: 60px;
   }
-  .footer-top__about {
-    grid-area: a;
-  }
-  .footer-top__category {
-    grid-area: b;
-  }
-  .footer-top__mailing {
-    grid-area: c;
-  }
-  .footer-top__mailing {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .mailing__description {
-    text-align: center;
-  }
-  .about__description {
-    text-align: justify;
+  .email,
+  .btn-subscribe {
+    flex: 0 1 auto;
   }
 }
 @media (max-width: 550px) {
@@ -663,7 +674,6 @@ body {
 
   .season-collection__grid {
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
   }
   .new-goods__grid {
     grid-template-columns: repeat(1, 1fr);

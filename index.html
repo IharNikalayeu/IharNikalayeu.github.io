@@ -19,11 +19,6 @@
       href="http://fonts.cdnfonts.com/css/post-no-bills-jaffna"
       rel="stylesheet"
     />
-
-    <!-- <link
-      href="http://fonts.cdnfonts.com/css/post-no-bills-jaffna?styles=18991"
-      rel="stylesheet"
-    /> -->
     <title>Porten</title>
   </head>
   <body>
@@ -98,13 +93,13 @@
         class="main-screen display--flex flex-direction--column align-items--center position--relative"
       >
         <div
-          class="block-logo text-transform--uppercase text-align--center position--relative"
+          class="block-logo text-transform--uppercase text-align--center position--relative z-index-1"
         >
           <h1 class="block-logo__title">PORTEN</h1>
           <p class="block-logo__sity">САНКТ-ПЕТЕРБУРГ</p>
         </div>
         <p
-          class="main-screen__description text-align--center text-transform--uppercase position--relative"
+          class="main-screen__description text-align--center text-transform--uppercase position--relative z-index-1"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
           interdum purus, est tortor pulvinar ut in. Fringilla a diam enim sed
@@ -113,7 +108,17 @@
           Tortor nibh magna feugiat id nunc, dui nisl viverra.
         </p>
         <div class="main-screen__img bg-image">
-          <img src="/img/bg/main-screen.jpg" alt="main-screen-bg" />
+          <img
+            srcset="
+              /img/bg/main-screen-750w.jpg   750w,
+              /img/bg/main-screen-1920w.jpg 1920w
+            "
+            sizes="
+                (max-width: 750px) 750px,
+              1920px"
+            src="/img/bg/main-screen-1920w.jpg"
+            alt="main-screen-bg"
+          />
         </div>
       </section>
       <!-- коллекции -->
@@ -135,8 +140,8 @@
                   href="#"
                   class="collection-item__link display--flex transition transform-scale"
                 >
-                  <img src="/img/watch.png" alt="watch"
-                /></a>
+                  <img src="/img/watch.png" alt="watch" />
+                </a>
                 <p class="collection-item__title">Louis XVI ATHOS</p>
                 <p class="collection-item__price">165 000 руб.</p>
               </div>
