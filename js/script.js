@@ -1,7 +1,4 @@
-const getArrayWatch = async function () {
-  const response = await import("..//js/data.js");
-  return response.watch;
-};
+import { watch } from "./data.js";
 
 const deleteAllChild = (parent) => {
   while (parent.firstChild) {
@@ -9,15 +6,13 @@ const deleteAllChild = (parent) => {
   }
 };
 
-const createNewGoods = async function () {
+const createNewGoods = () => {
   const parent = document.querySelector(".new-goods__grid");
 
   // удаление текущих блоков новых поступлений
   deleteAllChild(parent);
 
-  const arrayWatch = await getArrayWatch();
-
-  arrayWatch.map(({ name, img, price }) => {
+  const watchCart = watch.map(({ name, img, price }) => {
     const watchCart = document.createElement("div");
     watchCart.className =
       "collection-item display--flex flex-direction--column";
@@ -49,8 +44,10 @@ const createNewGoods = async function () {
     watchCart.appendChild(watchTitle);
     watchCart.appendChild(watchPrice);
 
-    parent.appendChild(watchCart);
+    return watchCart;
   });
+
+  parent.append(...watchCart);
 };
 
 createNewGoods();
