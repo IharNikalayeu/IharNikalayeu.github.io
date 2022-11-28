@@ -31,9 +31,7 @@ const createNewGoods = () => {
     watchPrice.innerText = price;
 
     // добавление дочерних элементов
-    watchCart.append(watchLink);
-    watchCart.append(watchTitle);
-    watchCart.append(watchPrice);
+    watchCart.append(watchLink, watchTitle, watchPrice);
 
     return watchCart;
   });
