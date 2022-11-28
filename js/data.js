@@ -1,4 +1,4 @@
-export const watch = [
+export const watches = [
   { name: "Louis XVI ATHOS", img: "/img/watch.png", price: "165 000 руб." },
   { name: "Louis XVI ATHOS", img: "/img/watch.png", price: "165 000 руб." },
   { name: "Louis XVI ATHOS", img: "/img/watch.png", price: "165 000 руб." },
